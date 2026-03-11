@@ -21,7 +21,7 @@ export default function ResumePage() {
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4" />
-            <a href="https://https://eufrasiojoao.site" className="hover:underline">
+            <a href="https://eufrasiojoao.site" className="hover:underline">
               https://eufrasiojoao.site
             </a>
           </div>
