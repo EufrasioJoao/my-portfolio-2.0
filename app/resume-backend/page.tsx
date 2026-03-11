@@ -21,8 +21,8 @@ export default function ResumeBackendPage() {
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4" />
-            <a href="https://eufrasiojaime.com" className="hover:underline">
-              eufrasiojaime.com
+            <a href="https://https://eufrasiojoao.site" className="hover:underline">
+              https://eufrasiojoao.site
             </a>
           </div>
           <div className="flex items-center gap-2">
