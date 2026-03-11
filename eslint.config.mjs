@@ -13,7 +13,6 @@ const eslintConfig = [
   // Global ignores (must be first)
   {
     ignores: [
-      "lib/generated/**/*",
       "node_modules/**/*",
       ".next/**/*",
       "out/**/*",
