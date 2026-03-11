@@ -40,7 +40,8 @@ export default function FlockProject() {
 
           <div className="flex gap-4 justify-center">
             <a
-              href="#"
+              href="https://flock.kimmy.pro/"
+              target="_blank"
               className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full hover:bg-foreground/90 transition-all"
             >
               <ExternalLink className="w-4 h-4" />
