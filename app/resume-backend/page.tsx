@@ -7,11 +7,14 @@ export default function ResumeBackendPage() {
       <header className="border-b-2 border-black pb-6 mb-6">
         <h1 className="text-4xl font-bold mb-2">Eufrásio Jaime</h1>
         <p className="text-xl text-gray-700 mb-4">Backend Developer</p>
-        
+
         <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4" />
-            <a href="mailto:eufrasiojoao00@gmail.com" className="hover:underline">
+            <a
+              href="mailto:eufrasiojoao00@gmail.com"
+              className="hover:underline"
+            >
               eufrasiojoao00@gmail.com
             </a>
           </div>
@@ -21,19 +24,28 @@ export default function ResumeBackendPage() {
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4" />
-            <a href="https://eufrasiojoao.site" className="hover:underline">
-              https://eufrasiojoao.site
+            <a
+              href="https://eufrasiojaime.saphirat.co.mz"
+              className="hover:underline"
+            >
+              https://eufrasiojaime.saphirat.co.mz
             </a>
           </div>
           <div className="flex items-center gap-2">
             <Linkedin className="w-4 h-4" />
-            <a href="https://www.linkedin.com/in/eufrasio-jo%C3%A3o-04a118248/" className="hover:underline">
+            <a
+              href="https://www.linkedin.com/in/eufrasio-jo%C3%A3o-04a118248/"
+              className="hover:underline"
+            >
               LinkedIn Profile
             </a>
           </div>
           <div className="flex items-center gap-2">
             <Github className="w-4 h-4" />
-            <a href="https://github.com/EufrasioJoao" className="hover:underline">
+            <a
+              href="https://github.com/EufrasioJoao"
+              className="hover:underline"
+            >
               github.com/EufrasioJoao
             </a>
           </div>
@@ -42,54 +54,82 @@ export default function ResumeBackendPage() {
 
       {/* Professional Summary */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Professional Summary</h2>
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Professional Summary
+        </h2>
         <p className="text-sm leading-relaxed">
-          Backend developer with 5+ years of experience designing and building scalable server-side 
-          applications and APIs. Expert in Node.js, Express, and database design with strong knowledge 
-          of system architecture, security, and performance optimization. Proven track record of building 
-          robust backend systems that handle thousands of concurrent users.
+          Backend developer with 5+ years of experience designing and building
+          scalable server-side applications and APIs. Expert in Node.js,
+          Express, and database design with strong knowledge of system
+          architecture, security, and performance optimization. Proven track
+          record of building robust backend systems that handle thousands of
+          concurrent users.
         </p>
       </section>
 
       {/* Technical Skills */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Technical Skills</h2>
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Technical Skills
+        </h2>
         <div className="space-y-3 text-sm">
           <div>
-            <p className="font-semibold mb-1">Backend Languages & Frameworks:</p>
-            <p className="text-gray-700">Node.js, Express.js, Python, FastAPI, TypeScript</p>
+            <p className="font-semibold mb-1">
+              Backend Languages & Frameworks:
+            </p>
+            <p className="text-gray-700">
+              Node.js, Express.js, Python, FastAPI, TypeScript
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Databases:</p>
-            <p className="text-gray-700">MySQL, PostgreSQL, MongoDB, Redis, Database Design, Query Optimization</p>
+            <p className="text-gray-700">
+              MySQL, PostgreSQL, MongoDB, Redis, Database Design, Query
+              Optimization
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">ORMs & Database Tools:</p>
-            <p className="text-gray-700">Prisma, Sequelize, Mongoose, TypeORM, Database Migrations</p>
+            <p className="text-gray-700">
+              Prisma, Sequelize, Mongoose, TypeORM, Database Migrations
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">APIs & Integration:</p>
-            <p className="text-gray-700">RESTful APIs, GraphQL, WebSockets, API Design, Third-party Integrations</p>
+            <p className="text-gray-700">
+              RESTful APIs, GraphQL, WebSockets, API Design, Third-party
+              Integrations
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Authentication & Security:</p>
-            <p className="text-gray-700">JWT, OAuth, bcrypt, API Security, CORS, Rate Limiting, Data Encryption</p>
+            <p className="text-gray-700">
+              JWT, OAuth, bcrypt, API Security, CORS, Rate Limiting, Data
+              Encryption
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Cloud & DevOps:</p>
-            <p className="text-gray-700">AWS (EC2, S3, RDS), Vercel, Docker, CI/CD, Nginx, Linux</p>
+            <p className="text-gray-700">
+              AWS (EC2, S3, RDS), Vercel, Docker, CI/CD, Nginx, Linux
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">AI & External Services:</p>
-            <p className="text-gray-700">OpenAI API, Gemini AI, WhatsApp API, Payment Gateways, Email Services</p>
+            <p className="text-gray-700">
+              OpenAI API, Gemini AI, WhatsApp API, Payment Gateways, Email
+              Services
+            </p>
           </div>
         </div>
       </section>
 
       {/* Professional Experience */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Professional Experience</h2>
-        
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Professional Experience
+        </h2>
+
         {/* Flexibilidade */}
         <div className="mb-4">
           <div className="flex justify-between items-start mb-1">
@@ -102,14 +142,23 @@ export default function ResumeBackendPage() {
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Designed and implemented RESTful APIs serving thousands of requests per day</li>
+            <li>
+              Designed and implemented RESTful APIs serving thousands of
+              requests per day
+            </li>
             <li>Built scalable database schemas with Prisma and PostgreSQL</li>
-            <li>Implemented authentication and authorization systems with JWT</li>
+            <li>
+              Implemented authentication and authorization systems with JWT
+            </li>
             <li>Optimized database queries reducing response time by 60%</li>
-            <li>Integrated third-party services including payment gateways and AI APIs</li>
+            <li>
+              Integrated third-party services including payment gateways and AI
+              APIs
+            </li>
           </ul>
           <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Technologies:</span> Node.js, Express, Prisma, PostgreSQL, Redis
+            <span className="font-semibold">Technologies:</span> Node.js,
+            Express, Prisma, PostgreSQL, Redis
           </p>
         </div>
 
@@ -125,14 +174,27 @@ export default function ResumeBackendPage() {
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Built custom backend solutions and APIs for various client projects</li>
-            <li>Designed database architectures for complex business requirements</li>
-            <li>Implemented real-time features using WebSockets and event-driven architecture</li>
-            <li>Integrated AI services (OpenAI, Gemini) for intelligent automation</li>
-            <li>Deployed and maintained applications on AWS and cloud platforms</li>
+            <li>
+              Built custom backend solutions and APIs for various client
+              projects
+            </li>
+            <li>
+              Designed database architectures for complex business requirements
+            </li>
+            <li>
+              Implemented real-time features using WebSockets and event-driven
+              architecture
+            </li>
+            <li>
+              Integrated AI services (OpenAI, Gemini) for intelligent automation
+            </li>
+            <li>
+              Deployed and maintained applications on AWS and cloud platforms
+            </li>
           </ul>
           <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Technologies:</span> Node.js, Python, MySQL, MongoDB, AWS
+            <span className="font-semibold">Technologies:</span> Node.js,
+            Python, MySQL, MongoDB, AWS
           </p>
         </div>
 
@@ -149,58 +211,61 @@ export default function ResumeBackendPage() {
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
             <li>Developed server-side applications with Node.js and Express</li>
-            <li>Created and maintained RESTful APIs for web and mobile applications</li>
+            <li>
+              Created and maintained RESTful APIs for web and mobile
+              applications
+            </li>
             <li>Designed and implemented database schemas with MongoDB</li>
-            <li>Implemented data validation, error handling, and logging systems</li>
+            <li>
+              Implemented data validation, error handling, and logging systems
+            </li>
             <li>Collaborated with frontend team to define API contracts</li>
           </ul>
           <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Technologies:</span> Node.js, Express, MongoDB, REST APIs
+            <span className="font-semibold">Technologies:</span> Node.js,
+            Express, MongoDB, REST APIs
           </p>
         </div>
       </section>
 
       {/* Key Projects */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Key Projects</h2>
-        
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Key Projects
+        </h2>
+
         <div className="space-y-3">
           {/* Flock */}
           <div>
-            <h3 className="text-lg font-bold">Flock - Business Social Network Backend</h3>
+            <h3 className="text-lg font-bold">
+              Flock - Business Social Network Backend
+            </h3>
             <p className="text-sm text-gray-800 mb-1">
-              Architected and built the complete backend infrastructure including user authentication, 
-              company profiles, project management, and event systems. Implemented real-time notifications 
+              Architected and built the complete backend infrastructure
+              including user authentication, company profiles, project
+              management, and event systems. Implemented real-time notifications
               and invitation system with complex authorization logic.
             </p>
             <p className="text-xs text-gray-600">
-              <span className="font-semibold">Technologies:</span> Node.js, Prisma, MySQL, JWT, WebSockets
+              <span className="font-semibold">Technologies:</span> Node.js,
+              Prisma, MySQL, JWT, WebSockets
             </p>
           </div>
 
           {/* Fluxime */}
           <div>
-            <h3 className="text-lg font-bold">Fluxime - Financial Management Backend</h3>
+            <h3 className="text-lg font-bold">
+              Fluxime - Financial Management Backend
+            </h3>
             <p className="text-sm text-gray-800 mb-1">
-              Built a robust backend system handling financial transactions, AI-powered WhatsApp integration, 
-              and complex business logic. Implemented secure payment processing and multi-user access control. 
-              Serves 1,000+ active users with 99.9% uptime.
+              Built a robust backend system handling financial transactions,
+              AI-powered WhatsApp integration, and complex business logic.
+              Implemented secure payment processing and multi-user access
+              control. Serves 1,000+ active users with 99.9% uptime.
             </p>
             <p className="text-xs text-gray-600">
-              <span className="font-semibold">Technologies:</span> Node.js, Prisma, MySQL, Gemini AI, WhatsApp API
-            </p>
-          </div>
-
-          {/* LeadsAI */}
-          <div>
-            <h3 className="text-lg font-bold">LeadsAI - Sales Automation Backend</h3>
-            <p className="text-sm text-gray-800 mb-1">
-              Developed an AI-powered sales automation system integrating OpenAI for conversation handling, 
-              lead scoring algorithms, and real-time analytics processing. Handles 2,500+ active clients 
-              with thousands of daily conversations.
-            </p>
-            <p className="text-xs text-gray-600">
-              <span className="font-semibold">Technologies:</span> Express, OpenAI API, Prisma, MySQL, Redis
+              <span className="font-semibold">Technologies:</span> Node.js,
+              Prisma, MySQL, Gemini AI, WhatsApp API
             </p>
           </div>
         </div>
@@ -208,7 +273,9 @@ export default function ResumeBackendPage() {
 
       {/* Additional Skills */}
       <section>
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Additional Competencies</h2>
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Additional Competencies
+        </h2>
         <div className="grid grid-cols-2 gap-2 text-sm">
           <p>• Microservices Architecture</p>
           <p>• API Documentation (Swagger)</p>

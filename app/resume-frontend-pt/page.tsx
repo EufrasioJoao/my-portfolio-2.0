@@ -7,11 +7,14 @@ export default function ResumeFrontendPtPage() {
       <header className="border-b-2 border-black pb-6 mb-6">
         <h1 className="text-4xl font-bold mb-2">Eufrásio Jaime</h1>
         <p className="text-xl text-gray-700 mb-4">Desenvolvedor Frontend</p>
-        
+
         <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4" />
-            <a href="mailto:eufrasiojoao00@gmail.com" className="hover:underline">
+            <a
+              href="mailto:eufrasiojoao00@gmail.com"
+              className="hover:underline"
+            >
               eufrasiojoao00@gmail.com
             </a>
           </div>
@@ -21,19 +24,28 @@ export default function ResumeFrontendPtPage() {
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4" />
-            <a href="https://eufrasiojoao.site" className="hover:underline">
-              https://eufrasiojoao.site
+            <a
+              href="https://eufrasiojaime.saphirat.co.mz"
+              className="hover:underline"
+            >
+              https://eufrasiojaime.saphirat.co.mz
             </a>
           </div>
           <div className="flex items-center gap-2">
             <Linkedin className="w-4 h-4" />
-            <a href="https://www.linkedin.com/in/eufrasio-jo%C3%A3o-04a118248/" className="hover:underline">
+            <a
+              href="https://www.linkedin.com/in/eufrasio-jo%C3%A3o-04a118248/"
+              className="hover:underline"
+            >
               Perfil LinkedIn
             </a>
           </div>
           <div className="flex items-center gap-2">
             <Github className="w-4 h-4" />
-            <a href="https://github.com/EufrasioJoao" className="hover:underline">
+            <a
+              href="https://github.com/EufrasioJoao"
+              className="hover:underline"
+            >
               github.com/EufrasioJoao
             </a>
           </div>
@@ -42,54 +54,79 @@ export default function ResumeFrontendPtPage() {
 
       {/* Professional Summary */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Resumo Profissional</h2>
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Resumo Profissional
+        </h2>
         <p className="text-sm leading-relaxed">
-          Desenvolvedor frontend com mais de 5 anos de experiência construindo aplicações web modernas, 
-          responsivas e performáticas. Especialista em React, Next.js e TypeScript com forte foco em 
-          experiência do usuário, acessibilidade e código limpo. Histórico comprovado de criar interfaces 
-          pixel-perfect e implementar designs UI/UX complexos que encantam os usuários.
+          Desenvolvedor frontend com mais de 5 anos de experiência construindo
+          aplicações web modernas, responsivas e performáticas. Especialista em
+          React, Next.js e TypeScript com forte foco em experiência do usuário,
+          acessibilidade e código limpo. Histórico comprovado de criar
+          interfaces pixel-perfect e implementar designs UI/UX complexos que
+          encantam os usuários.
         </p>
       </section>
 
       {/* Technical Skills */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Competências Técnicas</h2>
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Competências Técnicas
+        </h2>
         <div className="space-y-3 text-sm">
           <div>
             <p className="font-semibold mb-1">Frontend Principal:</p>
-            <p className="text-gray-700">React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3</p>
+            <p className="text-gray-700">
+              React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Estilização & UI:</p>
-            <p className="text-gray-700">Tailwind CSS, CSS Modules, Styled Components, SASS/SCSS, Design Responsivo</p>
+            <p className="text-gray-700">
+              Tailwind CSS, CSS Modules, Styled Components, SASS/SCSS, Design
+              Responsivo
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Gestão de Estado & Dados:</p>
-            <p className="text-gray-700">Redux, React Query, Context API, SWR, REST APIs, GraphQL</p>
+            <p className="text-gray-700">
+              Redux, React Query, Context API, SWR, REST APIs, GraphQL
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Animação & Interação:</p>
-            <p className="text-gray-700">Framer Motion, Animações CSS, GSAP, React Spring</p>
+            <p className="text-gray-700">
+              Framer Motion, Animações CSS, GSAP, React Spring
+            </p>
           </div>
           <div>
-            <p className="font-semibold mb-1">Ferramentas & Fluxo de Trabalho:</p>
-            <p className="text-gray-700">Git, Webpack, Vite, npm/yarn, Figma, VS Code, Chrome DevTools</p>
+            <p className="font-semibold mb-1">
+              Ferramentas & Fluxo de Trabalho:
+            </p>
+            <p className="text-gray-700">
+              Git, Webpack, Vite, npm/yarn, Figma, VS Code, Chrome DevTools
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Testes & Qualidade:</p>
-            <p className="text-gray-700">Jest, React Testing Library, Cypress, ESLint, Prettier</p>
+            <p className="text-gray-700">
+              Jest, React Testing Library, Cypress, ESLint, Prettier
+            </p>
           </div>
           <div>
             <p className="font-semibold mb-1">Performance & SEO:</p>
-            <p className="text-gray-700">Web Vitals, Lighthouse, SSR/SSG, Code Splitting, Lazy Loading</p>
+            <p className="text-gray-700">
+              Web Vitals, Lighthouse, SSR/SSG, Code Splitting, Lazy Loading
+            </p>
           </div>
         </div>
       </section>
 
       {/* Professional Experience */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Experiência Profissional</h2>
-        
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Experiência Profissional
+        </h2>
+
         {/* Flexibilidade */}
         <div className="mb-4">
           <div className="flex justify-between items-start mb-1">
@@ -102,14 +139,29 @@ export default function ResumeFrontendPtPage() {
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Construí aplicações web responsivas e acessíveis usando React e Next.js</li>
-            <li>Implementei designs UI pixel-perfect com Tailwind CSS e técnicas CSS modernas</li>
-            <li>Otimizei performance de aplicações alcançando pontuações Lighthouse 95+</li>
-            <li>Colaborei com designers para criar experiências de usuário perfeitas</li>
-            <li>Integrei APIs RESTful e gerenciei estado complexo de aplicações</li>
+            <li>
+              Construí aplicações web responsivas e acessíveis usando React e
+              Next.js
+            </li>
+            <li>
+              Implementei designs UI pixel-perfect com Tailwind CSS e técnicas
+              CSS modernas
+            </li>
+            <li>
+              Otimizei performance de aplicações alcançando pontuações
+              Lighthouse 95+
+            </li>
+            <li>
+              Colaborei com designers para criar experiências de usuário
+              perfeitas
+            </li>
+            <li>
+              Integrei APIs RESTful e gerenciei estado complexo de aplicações
+            </li>
           </ul>
           <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Tecnologias:</span> React, Next.js, TypeScript, Tailwind CSS, Framer Motion
+            <span className="font-semibold">Tecnologias:</span> React, Next.js,
+            TypeScript, Tailwind CSS, Framer Motion
           </p>
         </div>
 
@@ -117,7 +169,9 @@ export default function ResumeFrontendPtPage() {
         <div className="mb-4">
           <div className="flex justify-between items-start mb-1">
             <div>
-              <h3 className="text-lg font-bold">Desenvolvedor Frontend Freelance</h3>
+              <h3 className="text-lg font-bold">
+                Desenvolvedor Frontend Freelance
+              </h3>
               <p className="text-sm text-gray-700">Independente</p>
             </div>
             <div className="text-right text-sm">
@@ -125,14 +179,28 @@ export default function ResumeFrontendPtPage() {
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Entreguei soluções frontend personalizadas para diversos clientes em várias indústrias</li>
-            <li>Criei landing pages responsivas e aplicações web a partir de designs Figma</li>
-            <li>Implementei animações complexas e componentes UI interativos</li>
-            <li>Garanti compatibilidade cross-browser e responsividade mobile</li>
-            <li>Mantive alta qualidade de código com TypeScript e melhores práticas modernas</li>
+            <li>
+              Entreguei soluções frontend personalizadas para diversos clientes
+              em várias indústrias
+            </li>
+            <li>
+              Criei landing pages responsivas e aplicações web a partir de
+              designs Figma
+            </li>
+            <li>
+              Implementei animações complexas e componentes UI interativos
+            </li>
+            <li>
+              Garanti compatibilidade cross-browser e responsividade mobile
+            </li>
+            <li>
+              Mantive alta qualidade de código com TypeScript e melhores
+              práticas modernas
+            </li>
           </ul>
           <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Tecnologias:</span> React, Next.js, TypeScript, Tailwind CSS, Redux
+            <span className="font-semibold">Tecnologias:</span> React, Next.js,
+            TypeScript, Tailwind CSS, Redux
           </p>
         </div>
 
@@ -148,59 +216,69 @@ export default function ResumeFrontendPtPage() {
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Desenvolvi interfaces web responsivas com HTML, CSS e JavaScript</li>
-            <li>Construí componentes React reutilizáveis seguindo princípios de design atômico</li>
-            <li>Implementei validações de formulários e interfaces de usuário interativas</li>
-            <li>Colaborei com equipe backend para integrar APIs e exibir dados</li>
-            <li>Participei de revisões de código e mantive padrões de codificação</li>
+            <li>
+              Desenvolvi interfaces web responsivas com HTML, CSS e JavaScript
+            </li>
+            <li>
+              Construí componentes React reutilizáveis seguindo princípios de
+              design atômico
+            </li>
+            <li>
+              Implementei validações de formulários e interfaces de usuário
+              interativas
+            </li>
+            <li>
+              Colaborei com equipe backend para integrar APIs e exibir dados
+            </li>
+            <li>
+              Participei de revisões de código e mantive padrões de codificação
+            </li>
           </ul>
           <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Tecnologias:</span> React, JavaScript, CSS3, HTML5, Bootstrap
+            <span className="font-semibold">Tecnologias:</span> React,
+            JavaScript, CSS3, HTML5, Bootstrap
           </p>
         </div>
       </section>
 
       {/* Key Projects */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Projetos Principais</h2>
-        
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Projetos Principais
+        </h2>
+
         <div className="space-y-3">
           {/* Flock */}
           <div>
-            <h3 className="text-lg font-bold">Flock - Rede Social Empresarial</h3>
+            <h3 className="text-lg font-bold">
+              Flock - Rede Social Empresarial
+            </h3>
             <p className="text-sm text-gray-800 mb-1">
-              Construí o frontend completo para uma rede social empresarial com interações UI complexas, 
-              atualizações em tempo real e design responsivo. Implementei recursos avançados de filtragem, 
-              pesquisa e gestão de perfis.
+              Construí o frontend completo para uma rede social empresarial com
+              interações UI complexas, atualizações em tempo real e design
+              responsivo. Implementei recursos avançados de filtragem, pesquisa
+              e gestão de perfis.
             </p>
             <p className="text-xs text-gray-600">
-              <span className="font-semibold">Tecnologias:</span> Next.js, TypeScript, Tailwind CSS, Framer Motion
+              <span className="font-semibold">Tecnologias:</span> Next.js,
+              TypeScript, Tailwind CSS, Framer Motion
             </p>
           </div>
 
           {/* Fluxime */}
           <div>
-            <h3 className="text-lg font-bold">Fluxime - Dashboard Financeiro</h3>
+            <h3 className="text-lg font-bold">
+              Fluxime - Dashboard Financeiro
+            </h3>
             <p className="text-sm text-gray-800 mb-1">
-              Criei um dashboard financeiro interativo com gráficos em tempo real, visualizações de dados 
-              e layouts responsivos. Implementei formulários complexos e fluxos multi-etapas para gestão 
+              Criei um dashboard financeiro interativo com gráficos em tempo
+              real, visualizações de dados e layouts responsivos. Implementei
+              formulários complexos e fluxos multi-etapas para gestão
               financeira. 1.000+ usuários ativos.
             </p>
             <p className="text-xs text-gray-600">
-              <span className="font-semibold">Tecnologias:</span> Next.js, React Query, Tailwind CSS, Chart.js
-            </p>
-          </div>
-
-          {/* LeadsAI */}
-          <div>
-            <h3 className="text-lg font-bold">LeadsAI - Plataforma de Análise de Vendas</h3>
-            <p className="text-sm text-gray-800 mb-1">
-              Desenvolvi um dashboard de análise abrangente com visualização de dados em tempo real, 
-              rastreamento de conversas e métricas de desempenho. Otimizado para performance com 
-              grandes conjuntos de dados. 2.500+ clientes ativos.
-            </p>
-            <p className="text-xs text-gray-600">
-              <span className="font-semibold">Tecnologias:</span> Next.js, TypeScript, Tailwind CSS, Recharts
+              <span className="font-semibold">Tecnologias:</span> Next.js, React
+              Query, Tailwind CSS, Chart.js
             </p>
           </div>
         </div>
@@ -208,7 +286,9 @@ export default function ResumeFrontendPtPage() {
 
       {/* Additional Skills */}
       <section>
-        <h2 className="text-2xl font-bold border-b border-black mb-3">Competências Adicionais</h2>
+        <h2 className="text-2xl font-bold border-b border-black mb-3">
+          Competências Adicionais
+        </h2>
         <div className="grid grid-cols-2 gap-2 text-sm">
           <p>• Acessibilidade (WCAG, ARIA)</p>
           <p>• Progressive Web Apps (PWA)</p>

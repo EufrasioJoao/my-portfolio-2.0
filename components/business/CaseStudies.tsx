@@ -20,24 +20,7 @@ export function CaseStudies() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 bg-background border border-border rounded-2xl"
-          >
-            <div className="text-5xl font-bold mb-2">2,500+</div>
-            <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
-              Active Clients
-            </div>
-            <h3 className="text-xl font-bold mb-2">LeadsAI</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              AI-powered sales automation serving thousands of businesses. 
-              Increased average sales by 40% while reducing response time to seconds.
-            </p>
-          </motion.div>
-
+        <div className="grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +34,7 @@ export function CaseStudies() {
             </div>
             <h3 className="text-xl font-bold mb-2">Fluxime</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Complete financial management platform with WhatsApp AI assistant. 
+              Complete financial management platform with WhatsApp AI assistant.
               Helping individuals and businesses gain control of their finances.
             </p>
           </motion.div>
@@ -69,8 +52,8 @@ export function CaseStudies() {
             </div>
             <h3 className="text-xl font-bold mb-2">Flock</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Business social network connecting Mozambican companies. 
-              Creating a professional ecosystem for collaboration and growth.
+              Business social network connecting Mozambican companies. Creating
+              a professional ecosystem for collaboration and growth.
             </p>
           </motion.div>
         </div>
