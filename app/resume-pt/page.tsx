@@ -120,7 +120,7 @@ export default function ResumePtPage() {
               <p className="text-sm text-gray-700">Flexibilidade Lda</p>
             </div>
             <div className="text-right text-sm">
-              <p className="font-semibold">Ago 2023 - Presente</p>
+              <p className="font-semibold">Ago 2025 - Presente</p>
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
@@ -145,7 +145,7 @@ export default function ResumePtPage() {
               <p className="text-sm text-gray-700">Freelance & Consultoria</p>
             </div>
             <div className="text-right text-sm">
-              <p className="font-semibold">Jan 2021 - Ago 2023</p>
+              <p className="font-semibold">Dez  2022 - Ago 2025</p>
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
@@ -170,7 +170,7 @@ export default function ResumePtPage() {
               <p className="text-sm text-gray-700">FlexTech</p>
             </div>
             <div className="text-right text-sm">
-              <p className="font-semibold">Jun 2019 - Dez 2020</p>
+              <p className="font-semibold">Jun 2021 - Dez 2022</p>
             </div>
           </div>
           <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
