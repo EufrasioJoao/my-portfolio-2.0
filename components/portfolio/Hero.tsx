@@ -75,7 +75,7 @@ export function Hero() {
             <a href="https://github.com/EufrasioJoao" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/eufrasio-jo%C3%A3o-04a118248/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
+            <a href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
               <Linkedin className="w-5 h-5" />
             </a>
             <a href="mailto:eufrasiojoao00@gmail.com" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">

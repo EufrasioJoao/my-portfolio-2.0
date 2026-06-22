@@ -34,7 +34,7 @@ export default function ResumePage() {
           <div className="flex items-center gap-2">
             <Linkedin className="w-4 h-4" />
             <a
-              href="https://www.linkedin.com/in/eufrasio-jo%C3%A3o-04a118248/"
+              href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/"
               className="hover:underline"
             >
               LinkedIn Profile
