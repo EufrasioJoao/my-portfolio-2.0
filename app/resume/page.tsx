@@ -1,234 +1,354 @@
-import { Mail, Phone, Globe, Linkedin, Github } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Globe,
+  Github,
+  Linkedin,
+} from "lucide-react";
 
-export default function ResumePage() {
+export default function Resume() {
   return (
-    <main className="min-h-screen bg-white text-black p-8 max-w-[210mm] mx-auto">
-      {/* Header */}
-      <header className="border-b-2 border-black pb-6 mb-6">
-        <h1 className="text-4xl font-bold mb-2">Eufrásio Jaime</h1>
-        <p className="text-xl text-gray-700 mb-4">Full Stack Developer</p>
+    <main className="mx-auto max-w-[210mm] bg-white text-black p-10 text-[13px] leading-relaxed font-serif">
 
-        <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
-          <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4" />
-            <a
-              href="mailto:eufrasiojoao00@gmail.com"
-              className="hover:underline"
-            >
-              eufrasiojoao00@gmail.com
-            </a>
+      {/* Header */}
+
+      <header className="text-center mb-5">
+        <h1 className="text-5xl tracking-wide font-normal uppercase">
+          Eufrásio Jaime
+        </h1>
+
+        <div className="flex flex-wrap justify-center gap-4 mt-3 text-[13px]">
+
+          <div className="flex items-center gap-1">
+            <Phone size={14} />
+            +258 865 504 448
           </div>
-          <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4" />
-            <span>+258 865 504 448</span>
+
+          <div className="flex items-center gap-1">
+            <Mail size={14} />
+            eufrasiojoao00@gmail.com
           </div>
-          <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4" />
-            <a
-              href="https://eufrasiojaime.saphirat.co.mz"
-              className="hover:underline"
-            >
-              https://eufrasiojaime.saphirat.co.mz
-            </a>
+
+          <div className="flex items-center gap-1">
+  <Linkedin size={14} />
+  <a
+    href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    linkedin.com/in/eufrásio-jaime-04a118248
+  </a>
+</div>
+
+          <div className="flex items-center gap-1">
+            <Github size={14} />
+            github.com/EufrasioJoao
           </div>
-          <div className="flex items-center gap-2">
-            <Linkedin className="w-4 h-4" />
-            <a
-              href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/"
-              className="hover:underline"
-            >
-              LinkedIn Profile
-            </a>
+
+          <div className="flex items-center gap-1">
+            <Globe size={14} />
+            eufrasiojaime.saphirat.co.mz
           </div>
-          <div className="flex items-center gap-2">
-            <Github className="w-4 h-4" />
-            <a
-              href="https://github.com/EufrasioJoao"
-              className="hover:underline"
-            >
-              github.com/EufrasioJoao
-            </a>
-          </div>
+
         </div>
       </header>
 
-      {/* Professional Summary */}
-      <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">
-          Professional Summary
-        </h2>
-        <p className="text-sm leading-relaxed">
-          Full-stack developer with 5+ years of experience building scalable web
-          and mobile applications. Specialized in React, Next.js, Node.js, and
-          cloud infrastructure with a proven track record of delivering
-          high-impact products. Strong problem-solving abilities and expertise
-          spanning the entire development lifecycle from design to deployment
-          and optimization.
-        </p>
-      </section>
+      {/* EXPERIENCE */}
 
-      {/* Technical Skills */}
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">
-          Technical Skills
-        </h2>
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          <div>
-            <p className="font-semibold mb-1">Frontend:</p>
-            <p className="text-gray-700">
-              React, Next.js, TypeScript, Vue.js, Tailwind CSS, Framer Motion
-            </p>
-          </div>
-          <div>
-            <p className="font-semibold mb-1">Backend:</p>
-            <p className="text-gray-700">
-              Node.js, Express, Python, Prisma, GraphQL
-            </p>
-          </div>
-          <div>
-            <p className="font-semibold mb-1">Databases:</p>
-            <p className="text-gray-700">MySQL, MongoDB, Redis, PostgreSQL</p>
-          </div>
-          <div>
-            <p className="font-semibold mb-1">Cloud & DevOps:</p>
-            <p className="text-gray-700">AWS, Vercel, Docker, CI/CD, Nginx</p>
-          </div>
-          <div>
-            <p className="font-semibold mb-1">Mobile:</p>
-            <p className="text-gray-700">React Native, Expo, iOS, Android</p>
-          </div>
-          <div>
-            <p className="font-semibold mb-1">AI & Tools:</p>
-            <p className="text-gray-700">
-              OpenAI, Gemini AI, Git, Figma, VS Code
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Professional Experience */}
-      <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">
-          Professional Experience
+        <h2 className="font-bold text-xl border-b border-black mb-2">
+          Experience
         </h2>
 
         {/* Flexibilidade */}
+
         <div className="mb-4">
-          <div className="flex justify-between items-start mb-1">
+
+          <div className="flex justify-between">
+
             <div>
-              <h3 className="text-lg font-bold">Software Engineer</h3>
-              <p className="text-sm text-gray-700">Flexibilidade Lda</p>
+
+              <h3 className="font-bold">
+                Software Engineer
+              </h3>
+
+              <p className="italic text-gray-700">
+                Flexibilidade Lda
+              </p>
+
             </div>
-            <div className="text-right text-sm">
-              <p className="font-semibold">Aug 2023 - Present</p>
+
+            <div className="text-right">
+
+              <p className="font-semibold">
+                Aug 2023 – Present
+              </p>
+
             </div>
+
           </div>
-          <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Building scalable web applications with modern frameworks</li>
-            <li>Implementing responsive and user-friendly interfaces</li>
-            <li>Collaborating with teams to deliver projects on schedule</li>
-            <li>Contributing to code reviews and best practices</li>
+
+          <ul className="list-disc ml-5 mt-2 space-y-1">
+
+            <li>
+              Developed scalable web applications using
+              Next.js, TypeScript and Node.js.
+            </li>
+
+            <li>
+              Built reusable UI components improving
+              development productivity.
+            </li>
+
+            <li>
+              Integrated REST APIs, authentication,
+              dashboards and reporting systems.
+            </li>
+
+            <li>
+              Participated in architecture decisions,
+              code reviews and production deployments.
+            </li>
+
           </ul>
-          <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Technologies:</span> React, Next.js,
-            TypeScript, Node.js, PostgreSQL, Tailwind CSS
+
+          <p className="mt-2">
+            <strong>Tech Stack:</strong> React, Next.js,
+            TypeScript, Node.js, PostgreSQL, TailwindCSS
           </p>
+
         </div>
 
         {/* Freelance */}
+
         <div className="mb-4">
-          <div className="flex justify-between items-start mb-1">
+
+          <div className="flex justify-between">
+
             <div>
-              <h3 className="text-lg font-bold">Independent Developer</h3>
-              <p className="text-sm text-gray-700">Freelance & Consulting</p>
+
+              <h3 className="font-bold">
+                Freelance Full Stack Developer
+              </h3>
+
+              <p className="italic">
+                Self Employed
+              </p>
+
             </div>
-            <div className="text-right text-sm">
-              <p className="font-semibold">Jan 2021 - Aug 2023</p>
+
+            <div>
+
+              <p className="font-semibold">
+                Jan 2021 – Aug 2023
+              </p>
+
             </div>
+
           </div>
-          <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>Delivered custom web solutions for various clients</li>
-            <li>Built and launched personal projects and products</li>
-            <li>Provided technical consulting and code reviews</li>
-            <li>Managed full project lifecycle independently</li>
+
+          <ul className="list-disc ml-5 mt-2 space-y-1">
+
+            <li>
+              Designed and developed complete web
+              applications for local businesses.
+            </li>
+
+            <li>
+              Built SaaS platforms from database design
+              to deployment.
+            </li>
+
+            <li>
+              Integrated payment gateways,
+              authentication and AI APIs.
+            </li>
+
+            <li>
+              Managed full project lifecycle from planning
+              to production.
+            </li>
+
           </ul>
-          <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Technologies:</span> React, Next.js,
-            Python, Node.js, MySQL, Vercel
+
+          <p className="mt-2">
+            <strong>Tech Stack:</strong> React,
+            Next.js, Node.js, MySQL, Prisma, Vercel
           </p>
+
         </div>
 
-        {/* FlexTech */}
-        <div className="mb-4">
-          <div className="flex justify-between items-start mb-1">
-            <div>
-              <h3 className="text-lg font-bold">Full Stack Developer</h3>
-              <p className="text-sm text-gray-700">FlexTech</p>
-            </div>
-            <div className="text-right text-sm">
-              <p className="font-semibold">Jun 2019 - Dec 2020</p>
-            </div>
-          </div>
-          <ul className="list-disc list-inside text-sm space-y-1 text-gray-800">
-            <li>
-              Developed responsive web interfaces with HTML, CSS, and JavaScript
-            </li>
-            <li>
-              Built server-side applications and integrated with databases
-            </li>
-            <li>
-              Participated in full development lifecycle from concept to
-              deployment
-            </li>
-            <li>Collaborated with team members on feature implementation</li>
-          </ul>
-          <p className="text-xs text-gray-600 mt-2">
-            <span className="font-semibold">Technologies:</span> React,
-            JavaScript, Node.js, MongoDB, Express, CSS
-          </p>
-        </div>
       </section>
 
-      {/* Key Projects */}
+      {/* PROJECTS */}
+
       <section className="mb-6">
-        <h2 className="text-2xl font-bold border-b border-black mb-3">
-          Key Projects
+
+        <h2 className="font-bold text-xl border-b border-black mb-2">
+          Projects
         </h2>
 
-        <div className="space-y-3">
-          {/* Flock */}
-          <div>
-            <h3 className="text-lg font-bold">
-              Flock - Business Social Network
+        {/* Fluxime */}
+
+        <div className="mb-4">
+
+          <div className="flex justify-between">
+
+            <h3 className="font-bold">
+              Fluxime
             </h3>
-            <p className="text-sm text-gray-800 mb-1">
-              Business social network exclusively for Mozambican companies.
-              Platform for networking, project collaboration, and business
-              ecosystem events.
-            </p>
-            <p className="text-xs text-gray-600">
-              <span className="font-semibold">Technologies:</span> Next.js,
-              TypeScript, Prisma, MySQL
-            </p>
+
+            <span className="italic">
+              Next.js | Prisma | Gemini AI
+            </span>
+
           </div>
 
-          {/* Fluxime */}
-          <div>
-            <h3 className="text-lg font-bold">
-              Fluxime - Financial Management Platform
-            </h3>
-            <p className="text-sm text-gray-800 mb-1">
-              Complete personal and business financial management platform with
-              AI assistant on WhatsApp. Interactive dashboard, reports, and full
-              control. 1,000+ active users.
-            </p>
-            <p className="text-xs text-gray-600">
-              <span className="font-semibold">Technologies:</span> Next.js,
-              Prisma, MySQL, Gemini AI
-            </p>
-          </div>
+          <ul className="list-disc ml-5 mt-2 space-y-1">
+
+            <li>
+              Built an AI-powered financial management
+              platform.
+            </li>
+
+            <li>
+              Developed WhatsApp AI assistant for expense
+              tracking and reporting.
+            </li>
+
+            <li>
+              Designed dashboards, invoices,
+              analytics and financial reports.
+            </li>
+
+            <li>
+              Platform serves over 1,000 active users.
+            </li>
+
+          </ul>
+
         </div>
+
+        {/* Flock */}
+
+        <div>
+
+          <div className="flex justify-between">
+
+            <h3 className="font-bold">
+              Flock
+            </h3>
+
+            <span className="italic">
+              Next.js | TypeScript | MySQL
+            </span>
+
+          </div>
+
+          <ul className="list-disc ml-5 mt-2 space-y-1">
+
+            <li>
+              Developed a social platform connecting
+              Mozambican companies.
+            </li>
+
+            <li>
+              Implemented authentication, messaging,
+              company pages and event management.
+            </li>
+
+            <li>
+              Designed scalable backend architecture
+              using Prisma and MySQL.
+            </li>
+
+          </ul>
+
+        </div>
+
       </section>
+
+      {/* SKILLS */}
+
+      <section className="mb-6">
+
+        <h2 className="font-bold text-xl border-b border-black mb-2">
+          Technical Skills
+        </h2>
+
+        <div className="space-y-1">
+
+          <p>
+            <strong>Languages:</strong> TypeScript,
+            JavaScript, Python, SQL
+          </p>
+
+          <p>
+            <strong>Frontend:</strong> React,
+            Next.js, Vue.js, TailwindCSS
+          </p>
+
+          <p>
+            <strong>Backend:</strong> Node.js,
+            Express, GraphQL, Prisma
+          </p>
+
+          <p>
+            <strong>Database:</strong>
+            PostgreSQL, MySQL, MongoDB, Redis
+          </p>
+
+          <p>
+            <strong>Cloud:</strong>
+            AWS, Docker, Nginx, Vercel
+          </p>
+
+          <p>
+            <strong>Tools:</strong>
+            Git, GitHub, Figma, VSCode
+          </p>
+
+          <p>
+            <strong>AI:</strong>
+            OpenAI API, Gemini AI
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* EDUCATION */}
+
+      <section>
+
+        <h2 className="font-bold text-xl border-b border-black mb-2">
+          Education
+        </h2>
+
+        <div className="flex justify-between">
+
+          <div>
+
+            <h3 className="font-bold">
+              Bachelor of Computer Science
+            </h3>
+
+            <p className="italic">
+              University
+            </p>
+
+          </div>
+
+          <p>
+            Graduation Year
+          </p>
+
+        </div>
+
+      </section>
+
     </main>
   );
 }
