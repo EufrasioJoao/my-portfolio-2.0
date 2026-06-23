@@ -287,7 +287,7 @@ export default function Resume() {
 
           <p>
             <strong>Frontend:</strong> React,
-            Next.js, Vue.js, TailwindCSS
+            Next.js, React Native, Electron.Js, TailwindCSS
           </p>
 
           <p>
@@ -302,12 +302,12 @@ export default function Resume() {
 
           <p>
             <strong>Cloud:</strong>
-            AWS, Docker, Nginx, Vercel
+            AWS, Docker, Google Cloud, Vercel
           </p>
 
           <p>
             <strong>Tools:</strong>
-            Git, GitHub, Figma, VSCode
+            Git, GitHub, Figma
           </p>
 
           <p>
@@ -332,17 +332,17 @@ export default function Resume() {
           <div>
 
             <h3 className="font-bold">
-              Bachelor of Computer Science
+              Bachelor's degree in Information and Communication Technology
             </h3>
 
             <p className="italic">
-              University
+              Catholic University of Mozambique
             </p>
 
           </div>
 
           <p>
-            Graduation Year
+            2024
           </p>
 
         </div>
