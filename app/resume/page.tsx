@@ -19,7 +19,7 @@ export default function Resume() {
         </h1>
 
         <p className="mt-3 max-w-3xl mx-auto text-[13px] leading-relaxed">
-          Full Stack Software Engineer with 4+ years of experience building
+          Full Stack Software Engineer with 5+ years of experience building
           scalable SaaS applications, enterprise systems, AI-powered solutions,
           desktop and mobile applications using React, Next.js, TypeScript,
           Node.js and PostgreSQL. Passionate about building high-performance
