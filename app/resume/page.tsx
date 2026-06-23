@@ -1,3 +1,4 @@
+
 import {
   Mail,
   Phone,
@@ -17,7 +18,15 @@ export default function Resume() {
           Eufrásio Jaime
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-3 text-[13px]">
+        <p className="mt-3 max-w-3xl mx-auto text-[13px] leading-relaxed">
+          Full Stack Software Engineer with 4+ years of experience building
+          scalable SaaS applications, enterprise systems, AI-powered solutions,
+          desktop and mobile applications using React, Next.js, TypeScript,
+          Node.js and PostgreSQL. Passionate about building high-performance
+          software that solves real business problems.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mt-4 text-[13px]">
 
           <div className="flex items-center gap-1">
             <Phone size={14} />
@@ -30,25 +39,39 @@ export default function Resume() {
           </div>
 
           <div className="flex items-center gap-1">
-  <Linkedin size={14} />
-  <a
-    href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline"
-  >
-    linkedin.com/in/eufrásio-jaime-04a118248
-  </a>
-</div>
+            <Linkedin size={14} />
+            <a
+              href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              linkedin.com/in/eufrásio-jaime-04a118248
+            </a>
+          </div>
 
           <div className="flex items-center gap-1">
             <Github size={14} />
-            github.com/EufrasioJoao
+            <a
+              href="https://github.com/EufrasioJoao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              github.com/EufrasioJoao
+            </a>
           </div>
 
           <div className="flex items-center gap-1">
             <Globe size={14} />
-            eufrasiojaime.saphirat.co.mz
+            <a
+              href="https://eufrasiojaime.saphirat.co.mz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              eufrasiojaime.saphirat.co.mz
+            </a>
           </div>
 
         </div>
@@ -62,8 +85,6 @@ export default function Resume() {
           Experience
         </h2>
 
-        {/* Flexibilidade */}
-
         <div className="mb-4">
 
           <div className="flex justify-between">
@@ -71,7 +92,7 @@ export default function Resume() {
             <div>
 
               <h3 className="font-bold">
-                Software Engineer
+                Full Stack Software Engineer
               </h3>
 
               <p className="italic text-gray-700">
@@ -93,37 +114,35 @@ export default function Resume() {
           <ul className="list-disc ml-5 mt-2 space-y-1">
 
             <li>
-              Developed scalable web applications using
+              Developed scalable SaaS and enterprise applications using
               Next.js, TypeScript and Node.js.
             </li>
 
             <li>
-              Built reusable UI components improving
+              Built reusable UI components and shared architecture improving
               development productivity.
             </li>
 
             <li>
-              Integrated REST APIs, authentication,
-              dashboards and reporting systems.
+              Designed REST APIs, authentication systems, dashboards,
+              reporting modules and third-party integrations.
             </li>
 
             <li>
-              Participated in architecture decisions,
-              code reviews and production deployments.
+              Participated in software architecture, code reviews and
+              production deployments across multiple projects.
             </li>
 
           </ul>
 
           <p className="mt-2">
-            <strong>Tech Stack:</strong> React, Next.js,
-            TypeScript, Node.js, PostgreSQL, TailwindCSS
+            <strong>Technologies:</strong> React, Next.js, TypeScript,
+            Node.js, PostgreSQL, TailwindCSS
           </p>
 
         </div>
 
-        {/* Freelance */}
-
-        <div className="mb-4">
+        <div>
 
           <div className="flex justify-between">
 
@@ -152,30 +171,25 @@ export default function Resume() {
           <ul className="list-disc ml-5 mt-2 space-y-1">
 
             <li>
-              Designed and developed complete web
-              applications for local businesses.
+              Designed and delivered complete web applications for startups,
+              SMEs and local businesses.
             </li>
 
             <li>
-              Built SaaS platforms from database design
-              to deployment.
+              Built SaaS platforms, AI integrations, payment systems and
+              enterprise solutions from database design to deployment.
             </li>
 
             <li>
-              Integrated payment gateways,
-              authentication and AI APIs.
-            </li>
-
-            <li>
-              Managed full project lifecycle from planning
-              to production.
+              Managed the complete software development lifecycle including
+              planning, development, testing and production releases.
             </li>
 
           </ul>
 
           <p className="mt-2">
-            <strong>Tech Stack:</strong> React,
-            Next.js, Node.js, MySQL, Prisma, Vercel
+            <strong>Technologies:</strong> React, Next.js, Node.js,
+            Prisma, MySQL, PostgreSQL, Vercel
           </p>
 
         </div>
@@ -187,10 +201,8 @@ export default function Resume() {
       <section className="mb-6">
 
         <h2 className="font-bold text-xl border-b border-black mb-2">
-          Projects
+          Selected Projects
         </h2>
-
-        {/* Fluxime */}
 
         <div className="mb-4">
 
@@ -201,37 +213,87 @@ export default function Resume() {
             </h3>
 
             <span className="italic">
-              Next.js | Prisma | Gemini AI
+              Next.js • Prisma • Gemini AI
             </span>
 
           </div>
 
-          <ul className="list-disc ml-5 mt-2 space-y-1">
+          <ul className="list-disc ml-5 mt-2">
 
             <li>
-              Built an AI-powered financial management
-              platform.
+              Built an AI-powered financial management platform with
+              WhatsApp AI integration, invoicing, analytics and reporting
+              serving over 1,000 active users.
             </li>
 
             <li>
-              Developed WhatsApp AI assistant for expense
-              tracking and reporting.
-            </li>
-
-            <li>
-              Designed dashboards, invoices,
-              analytics and financial reports.
-            </li>
-
-            <li>
-              Platform serves over 1,000 active users.
+              Implemented dashboards, financial reports and automation
+              features for businesses.
             </li>
 
           </ul>
 
         </div>
 
-        {/* Flock */}
+        <div className="mb-4">
+
+          <div className="flex justify-between">
+
+            <h3 className="font-bold">
+              PayMoz
+            </h3>
+
+            <span className="italic">
+              Next.js • Node.js • M-Pesa API
+            </span>
+
+          </div>
+
+          <ul className="list-disc ml-5 mt-2">
+
+            <li>
+              Developed a payment gateway enabling businesses to integrate
+              M-Pesa payments into their applications.
+            </li>
+
+            <li>
+              Designed secure payment APIs, transaction verification and
+              webhook processing.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div className="mb-4">
+
+          <div className="flex justify-between">
+
+            <h3 className="font-bold">
+              SIGAE – Integrated Municipal Management System
+            </h3>
+
+            <span className="italic">
+              Electron • React Native • Node.js
+            </span>
+
+          </div>
+
+          <ul className="list-disc ml-5 mt-2">
+
+            <li>
+              Developed a desktop ERP and mobile application for municipal
+              revenue collection used by the Municipality of Milange.
+            </li>
+
+            <li>
+              Implemented revenue management, authentication, reporting and
+              field data collection features.
+            </li>
+
+          </ul>
+
+        </div>
 
         <div>
 
@@ -242,26 +304,20 @@ export default function Resume() {
             </h3>
 
             <span className="italic">
-              Next.js | TypeScript | MySQL
+              Next.js • TypeScript • MySQL
             </span>
 
           </div>
 
-          <ul className="list-disc ml-5 mt-2 space-y-1">
+          <ul className="list-disc ml-5 mt-2">
 
             <li>
-              Developed a social platform connecting
-              Mozambican companies.
+              Built a social platform connecting Mozambican companies through
+              messaging, company pages and event management.
             </li>
 
             <li>
-              Implemented authentication, messaging,
-              company pages and event management.
-            </li>
-
-            <li>
-              Designed scalable backend architecture
-              using Prisma and MySQL.
+              Designed scalable backend architecture using Prisma and MySQL.
             </li>
 
           </ul>
@@ -281,38 +337,35 @@ export default function Resume() {
         <div className="space-y-1">
 
           <p>
-            <strong>Languages:</strong> TypeScript,
-            JavaScript, Python, SQL
+            <strong>Languages:</strong> TypeScript, JavaScript, Python, SQL
           </p>
 
           <p>
-            <strong>Frontend:</strong> React,
-            Next.js, React Native, Electron.Js, TailwindCSS
+            <strong>Frontend:</strong> React, Next.js, React Native,
+            Electron.js, Tailwind CSS
           </p>
 
           <p>
-            <strong>Backend:</strong> Node.js,
-            Express, GraphQL, Prisma
+            <strong>Backend:</strong> Node.js, Express, GraphQL,
+            REST APIs, Prisma
           </p>
 
           <p>
-            <strong>Database:</strong>
-            PostgreSQL, MySQL, MongoDB, Redis
+            <strong>Databases:</strong> PostgreSQL, MySQL,
+            MongoDB, Redis
           </p>
 
           <p>
-            <strong>Cloud:</strong>
-            AWS, Docker, Google Cloud, Vercel
+            <strong>Cloud & DevOps:</strong> AWS, Docker,
+            Google Cloud, Vercel, GitHub Actions
           </p>
 
           <p>
-            <strong>Tools:</strong>
-            Git, GitHub, Figma
+            <strong>Tools:</strong> Git, GitHub, Figma
           </p>
 
           <p>
-            <strong>AI:</strong>
-            OpenAI API, Gemini AI
+            <strong>AI:</strong> OpenAI API, Gemini AI
           </p>
 
         </div>
@@ -332,7 +385,7 @@ export default function Resume() {
           <div>
 
             <h3 className="font-bold">
-              Bachelor's degree in Information and Communication Technology
+              Bachelor of Information and Communication Technology
             </h3>
 
             <p className="italic">
@@ -342,7 +395,7 @@ export default function Resume() {
           </div>
 
           <p>
-            2024
+            2020 – 2024
           </p>
 
         </div>
@@ -352,3 +405,4 @@ export default function Resume() {
     </main>
   );
 }
+
