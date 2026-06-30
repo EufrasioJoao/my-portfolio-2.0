@@ -1,18 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from "@/lib/translations";
 
 export function Hero() {
   const { language } = useLanguage();
   return (
-    <section className="relative py-35 flex  justify-center px-6">
+    <section className="relative py-35 flex justify-center px-6">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       
-      <div className="max-w-5xl w-full">
+      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
         <motion.div
+          className="flex-1"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -75,13 +77,35 @@ export function Hero() {
             <a href="https://github.com/EufrasioJoao" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
+            <a href="https://www.linkedin.com/in/eufrasiojaime/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
               <Linkedin className="w-5 h-5" />
             </a>
             <a href="mailto:eufrasiojoao00@gmail.com" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
               <Mail className="w-5 h-5" />
             </a>
+            <a href=""></a>
+            <a href="tel:+258865504448" className="w-12 h-12 rounded-full border-2 border-muted-foreground flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground hover:scale-110 transition-all">
+              <Phone className="w-5 h-5" />
+            </a>
           </motion.div>
+        </motion.div>
+
+        {/* Profile image */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex-shrink-0"
+        >
+          <div className="relative w-56 h-80 md:w-84 md:h-126">
+            <Image
+              src="/me2.png"
+              alt="Eufrásio Jaime"
+              fill
+              className="object-cover rounded-2xl"
+              priority
+            />
+          </div>
         </motion.div>
       </div>
       

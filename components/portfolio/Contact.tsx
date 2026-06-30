@@ -1,25 +1,44 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from "@/lib/translations";
 
 export function Contact() {
   const { language } = useLanguage();
-  
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+    setStatus("loading");
+    setErrorMsg("");
+
     const formData = new FormData(e.currentTarget);
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
-    
-    const subject = `Portfolio Contact from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-    
-    window.open(`mailto:eufrasiojoao00@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`, '_blank');
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      (e.target as HTMLFormElement).reset();
+    } catch (err: unknown) {
+      setErrorMsg(err instanceof Error ? err.message : "Failed to send message.");
+      setStatus("error");
+    }
   };
   
   return (
@@ -132,10 +151,40 @@ export function Contact() {
             
             <button
               type="submit"
-              className="w-full bg-foreground text-background px-8 py-4 rounded-full hover:bg-foreground/90 hover:scale-105 transition-all shadow-lg hover:shadow-xl font-medium"
+              disabled={status === "loading"}
+              className="w-full bg-foreground text-background px-8 py-4 rounded-full hover:bg-foreground/90 hover:scale-105 transition-all shadow-lg hover:shadow-xl font-medium disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
             >
-              {translations.contact.form.submit[language]}
+              {status === "loading" ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  {language === "pt" ? "Enviando..." : "Sending..."}
+                </>
+              ) : (
+                translations.contact.form.submit[language]
+              )}
             </button>
+
+            {status === "success" && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400"
+              >
+                <CheckCircle className="w-4 h-4" />
+                {language === "pt" ? "Mensagem enviada com sucesso!" : "Message sent successfully!"}
+              </motion.div>
+            )}
+
+            {status === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-2 text-sm text-red-600 dark:text-red-400"
+              >
+                <AlertCircle className="w-4 h-4" />
+                {errorMsg}
+              </motion.div>
+            )}
           </motion.form>
         </div>
       </div>

@@ -40,9 +40,9 @@ export function About() {
             className="relative"
           >
             {/* Profile Image Placeholder */}
-            <div className="aspect-square rounded-3xl bg-muted/30 overflow-hidden border border-border shadow-md">
+            <div className="aspect-auto rounded-3xl bg-muted/30 overflow-hidden border border-border shadow-md">
               <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <img src={'/me.jpeg'} className="w-full h-full"/>               
+                <img src={'/me.png'} className="w-full h-full"/>               
               </div>
             </div>
           </motion.div>
@@ -79,6 +79,27 @@ export function About() {
               <p className="text-lg text-muted-foreground leading-[1.8]">
                 {translations.about.paragraph3[language]}
               </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <a
+                href={language === "pt" ? "/resume-pt" : "/resume"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all font-medium text-sm"
+              >
+                {language === "pt" ? "Ver Currículo" : "View Resume"}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
             </motion.div>
           </div>
         </div>

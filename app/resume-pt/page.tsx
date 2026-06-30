@@ -6,8 +6,12 @@ import {
   Github,
   Linkedin,
 } from "lucide-react";
+import { getDuration, jobs } from "@/lib/duration";
 
 export default function Resume() {
+  const forge = getDuration(jobs[0].startDate, jobs[0].endDate, "pt");
+  const flex = getDuration(jobs[1].startDate, jobs[1].endDate, "pt");
+  const flextech = getDuration(jobs[2].startDate, jobs[2].endDate, "pt");
   return (
     <main className="mx-auto max-w-[210mm] bg-white text-black p-10 text-[13px] leading-relaxed font-serif">
 
@@ -43,12 +47,12 @@ export default function Resume() {
           <div className="flex items-center gap-1">
             <Linkedin size={14} />
             <a
-              href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/"
+              href="https://www.linkedin.com/in/eufrasiojaime/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              linkedin.com/in/eufrásio-jaime-04a118248
+              linkedin.com/in/eufrasiojaime
             </a>
           </div>
 
@@ -95,51 +99,101 @@ export default function Resume() {
             <div>
 
               <h3 className="font-bold">
-                Engenheiro de Software Full Stack
+                Engenheiro de Software
               </h3>
 
               <p className="italic text-gray-700">
-                Flexibilidade Lda
+                Flexibilidade Lda · Tempo integral
               </p>
 
             </div>
 
-            <p className="font-semibold">
-              Ago 2023 – Presente
-            </p>
+            <div className="text-right">
+
+              <p className="font-semibold">
+                {flex}
+              </p>
+
+            </div>
 
           </div>
 
           <ul className="list-disc ml-5 mt-2 space-y-1">
 
             <li>
-              Desenvolvimento de aplicações SaaS e sistemas empresariais
-              utilizando Next.js, TypeScript e Node.js.
+              Desenvolvimento de software e soluções baseadas em Node.js.
             </li>
 
             <li>
-              Criação de componentes reutilizáveis e arquitetura compartilhada,
-              aumentando a produtividade das equipas de desenvolvimento.
+              Criação de componentes reutilizáveis e arquitetura partilhada, aumentando a produtividade da equipa.
             </li>
 
             <li>
-              Desenvolvimento de APIs REST, autenticação, dashboards,
-              relatórios e integrações com serviços externos.
-            </li>
-
-            <li>
-              Participação em decisões de arquitetura, revisão de código e
-              implementação de sistemas em produção.
+              Desenvolvimento de APIs REST, autenticação, dashboards e integrações com serviços externos.
             </li>
 
           </ul>
 
           <p className="mt-2">
-            <strong>Tecnologias:</strong> React, Next.js, TypeScript,
-            Node.js, PostgreSQL e Tailwind CSS
+            <strong>Tecnologias:</strong> React, Next.js, TypeScript, Node.js, MySQL, Tailwind CSS
           </p>
 
         </div>
+
+
+        <div className="mb-4">
+
+          <div className="flex justify-between">
+
+            <div>
+
+              <h3 className="font-bold">
+                Engenheiro de Software
+              </h3>
+
+              <p className="italic text-gray-700">
+                Forge · Tempo integral
+              </p>
+
+            </div>
+
+            <div className="text-right">
+
+              <p className="font-semibold">
+                {forge}
+              </p>
+              <p className="text-gray-600 text-xs">Nampula, Moçambique · Híbrido</p>
+
+            </div>
+
+          </div>
+
+          <ul className="list-disc ml-5 mt-2 space-y-1">
+
+            <li>
+              Responsável por criar soluções completas para clientes em todas as etapas do desenvolvimento, desde o conceito até a implantação.
+            </li>
+
+            <li>
+              Implementação de aplicações fullstack utilizando frameworks modernos de JavaScript (Next.js, React, Node.js).
+            </li>
+
+            <li>
+              Liderança de decisões de arquitetura técnica em projetos de clientes.
+            </li>
+
+            <li>
+              Desenvolvimento web, arquitetura de sistema e colaboração multifuncional.
+            </li>
+
+          </ul>
+
+          <p className="mt-2">
+            <strong>Tecnologias:</strong> React, Next.js, TypeScript, Node.js, Prisma, MySQL
+          </p>
+
+        </div>
+
 
         <div>
 
@@ -148,43 +202,44 @@ export default function Resume() {
             <div>
 
               <h3 className="font-bold">
-                Desenvolvedor Full Stack Freelancer
+                Engenheiro de Software
               </h3>
 
               <p className="italic">
-                Trabalho Independente
+                FlexTech · Tempo integral
               </p>
 
             </div>
 
-            <p className="font-semibold">
-              Jan 2021 – Ago 2023
-            </p>
+            <div className="text-right">
+
+              <p className="font-semibold">
+                {flextech}
+              </p>
+              <p className="text-gray-600 text-xs">Nampula, Moçambique · No local</p>
+
+            </div>
 
           </div>
 
           <ul className="list-disc ml-5 mt-2 space-y-1">
 
             <li>
-              Desenvolvimento de aplicações web completas para startups,
-              pequenas e médias empresas.
+              Design, desenvolvimento e manutenção de aplicações web e mobile em todo o ciclo de desenvolvimento.
             </li>
 
             <li>
-              Construção de plataformas SaaS, soluções com IA, gateways de
-              pagamento e sistemas empresariais.
+              Colaboração com equipas multifuncionais para entregar soluções escaláveis com JavaScript, React e Node.js.
             </li>
 
             <li>
-              Gestão de todo o ciclo de desenvolvimento, desde o planeamento
-              até à implementação em produção.
+              Foco na qualidade do código, melhores práticas e processos de CI/CD.
             </li>
 
           </ul>
 
           <p className="mt-2">
-            <strong>Tecnologias:</strong> React, Next.js, Node.js,
-            Prisma, PostgreSQL, MySQL e Vercel
+            <strong>Tecnologias:</strong> React, JavaScript, Node.js, MongoDB, Express, CSS
           </p>
 
         </div>
@@ -335,7 +390,7 @@ export default function Resume() {
 
           <p>
             <strong>Linguagens:</strong> TypeScript, JavaScript,
-            Python e SQL
+            Node.JSs e SQL
           </p>
 
           <p>

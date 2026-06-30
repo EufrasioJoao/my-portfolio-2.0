@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 
 const navItems = [
   { label: { en: "About", pt: "Sobre" }, href: "#about" },
   { label: { en: "Skills", pt: "Habilidades" }, href: "#skills" },
+  { label: { en: "AI", pt: "IA" }, href: "#ai" },
   { label: { en: "Work", pt: "Trabalho" }, href: "#work" },
   { label: { en: "Contact", pt: "Contato" }, href: "#contact" },
 ];
@@ -59,14 +60,32 @@ export function Header() {
             ))}
             
             {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-1.5 border border-border rounded-full hover:border-foreground transition-all text-sm"
-              title={language === "en" ? "Switch to Portuguese" : "Mudar para Inglês"}
-            >
-              <Globe className="w-4 h-4" />
-              <span className="uppercase font-medium">{language}</span>
-            </button>
+            <div className="flex items-center gap-1 p-1 border border-border rounded-full">
+              <button
+                onClick={() => setLanguage("en")}
+                title="English"
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                  language === "en"
+                    ? "bg-foreground text-background"
+                    : "hover:bg-muted text-muted-foreground"
+                }`}
+              >
+                <img src="https://flagcdn.com/us.svg" alt="English" className="w-5 h-3.5 rounded-sm object-cover" />
+                <span>EN</span>
+              </button>
+              <button
+                onClick={() => setLanguage("pt")}
+                title="Português"
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                  language === "pt"
+                    ? "bg-foreground text-background"
+                    : "hover:bg-muted text-muted-foreground"
+                }`}
+              >
+                <img src="https://flagcdn.com/br.svg" alt="Português" className="w-5 h-3.5 rounded-sm object-cover" />
+                <span>PT</span>
+              </button>
+            </div>
             
             <a
               href="#contact"
@@ -112,16 +131,35 @@ export function Header() {
               ))}
               
               {/* Language Toggle Mobile */}
-              <motion.button
-                onClick={toggleLanguage}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navItems.length * 0.1 }}
-                className="flex items-center gap-2 px-6 py-3 border border-border rounded-full hover:border-foreground transition-all"
+                className="flex items-center gap-2 p-1.5 border border-border rounded-full"
               >
-                <Globe className="w-5 h-5" />
-                <span className="uppercase font-medium text-lg">{language}</span>
-              </motion.button>
+                <button
+                  onClick={() => { setLanguage("en"); setIsMobileMenuOpen(false); }}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-base font-medium transition-all ${
+                    language === "en"
+                      ? "bg-foreground text-background"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  <img src="https://flagcdn.com/us.svg" alt="English" className="w-6 h-4 rounded-sm object-cover" />
+                  <span>EN</span>
+                </button>
+                <button
+                  onClick={() => { setLanguage("pt"); setIsMobileMenuOpen(false); }}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-base font-medium transition-all ${
+                    language === "pt"
+                      ? "bg-foreground text-background"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  <img src="https://flagcdn.com/br.svg" alt="Português" className="w-6 h-4 rounded-sm object-cover" />
+                  <span>PT</span>
+                </button>
+              </motion.div>
               
               <motion.a
                 href="#contact"

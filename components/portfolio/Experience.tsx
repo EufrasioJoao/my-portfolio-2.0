@@ -5,27 +5,34 @@ import { Briefcase, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from "@/lib/translations";
 
+import { getDuration } from "@/lib/duration";
+
 const experiences = [
   {
     company: "Flexibilidade Lda",
     position: "flexibilidade",
-    location: "Nampula, Moçambique",
-    period: "Aug 2023 - Present",
-    technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    location: { en: "Nampula, Mozambique", pt: "Nampula, Moçambique" },
+    startDate: new Date(2025, 7), // Aug 2025
+    endDate: null,
+    type: { en: "Full-time", pt: "Tempo integral" },
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "MySQL", "Tailwind CSS"],
   },
   {
-    company: "Freelance & Consulting",
-    position: "freelance",
-    location: "Remote",
-    period: "Jan 2021 - Aug 2023",
-    technologies: ["React", "Next.js", "Python", "Node.js", "Supabase", "Vercel"],
-    isFreelance: true,
+    company: "Forge",
+    position: "forge",
+    location: { en: "Nampula, Mozambique · Hybrid", pt: "Nampula, Moçambique · Híbrido" },
+    startDate: new Date(2024, 10), // Nov 2024
+    endDate: null,
+    type: { en: "Full-time", pt: "Tempo integral" },
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "Prisma", "MySQL"],
   },
   {
     company: "FlexTech",
     position: "flextech",
-    location: "Nampula, Moçambique",
-    period: "Jun 2019 - Dec 2020",
+    location: { en: "Nampula, Mozambique · On-site", pt: "Nampula, Moçambique · No local" },
+    startDate: new Date(2024, 2), // Mar 2024
+    endDate: new Date(2024, 9),   // Oct 2024
+    type: { en: "Full-time", pt: "Tempo integral" },
     technologies: ["React", "JavaScript", "Node.js", "MongoDB", "Express", "CSS"],
   },
 ];
@@ -77,7 +84,7 @@ export function Experience() {
             
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full mb-6">
               <div className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
-              <span className="text-sm font-medium">{experiences[0].period}</span>
+              <span className="text-sm font-medium">{getDuration(experiences[0].startDate, experiences[0].endDate, language)}</span>
             </div>
 
             <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-foreground transition-colors">
@@ -91,7 +98,7 @@ export function Experience() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">{experiences[0].location}</span>
+                <span className="text-sm">{experiences[0].location[language]}</span>
               </div>
             </div>
 
@@ -131,31 +138,31 @@ export function Experience() {
             <div className="absolute inset-0 bg-gradient-to-br from-muted/0 to-muted/0 group-hover:from-muted/30 group-hover:to-muted/20 transition-all duration-300 -z-10" />
             
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full mb-6">
-              <div className="w-2 h-2 rounded-full bg-foreground" />
-              <span className="text-sm font-medium">{experiences[1].period}</span>
+              <div className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
+              <span className="text-sm font-medium">{getDuration(experiences[1].startDate, experiences[1].endDate, language)}</span>
             </div>
 
             <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-foreground transition-colors">
-              {translations.experience.freelance.position[language]}
+              {translations.experience.forge.position[language]}
             </h3>
             
             <div className="flex items-center gap-4 text-muted-foreground mb-6">
               <div className="flex items-center gap-2">
                 <Briefcase className="w-4 h-4" />
-                <span className="font-semibold">{translations.experience.freelance.company[language]}</span>
+                <span className="font-semibold">{experiences[1].company}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">{experiences[1].location}</span>
+                <span className="text-sm">{experiences[1].location[language]}</span>
               </div>
             </div>
 
             <p className="text-muted-foreground mb-6 leading-[1.8]">
-              {translations.experience.freelance.description[language]}
+              {translations.experience.forge.description[language]}
             </p>
 
             <div className="space-y-3 mb-6">
-              {translations.experience.freelance.achievements.map((achievement: any, i: number) => (
+              {translations.experience.forge.achievements.map((achievement: any, i: number) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground leading-[1.8]">{achievement[language]}</span>
@@ -190,7 +197,7 @@ export function Experience() {
           {/* Company badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full mb-6">
             <div className="w-2 h-2 rounded-full bg-foreground" />
-            <span className="text-sm font-medium">{experiences[2].period}</span>
+            <span className="text-sm font-medium">{getDuration(experiences[2].startDate, experiences[2].endDate, language)}</span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -206,7 +213,7 @@ export function Experience() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  <span className="text-sm">{experiences[2].location}</span>
+                  <span className="text-sm">{experiences[2].location[language]}</span>
                 </div>
               </div>
 

@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from "@/lib/translations";
 
-export default function FlockProject() {
+export default function AprenderInglesProject() {
   const { language } = useLanguage();
   const t = translations.projectPages;
-  const p = t.flock;
+  const p = t.aprenderIngles;
 
   return (
     <main className="min-h-screen">
@@ -22,19 +22,26 @@ export default function FlockProject() {
       <section className="pt-32 pb-20 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-muted/30 via-background to-muted/20 -z-10" />
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">Flock</h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">{p.subtitle[language]}</p>
+          <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-3">{p.tag[language]}</p>
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">Aprender Inglês</h1>
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">{p.subtitle[language]}</p>
           <div className="flex flex-wrap gap-3 justify-center mb-8">
-            {["Next.js", "TypeScript", "Prisma", "MySQL"].map((tech) => (
+            {["Next.js", "Tailwind CSS", "M-Pesa", "E-Mola"].map((tech) => (
               <span key={tech} className="px-4 py-2 bg-background border border-border rounded-full text-sm">{tech}</span>
             ))}
           </div>
           <div className="flex gap-4 justify-center">
-            <a href="https://flock.forge.co.mz/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full hover:bg-foreground/90 transition-all">
+            <a href="https://aprenderingles.saphirat.co.mz/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full hover:bg-foreground/90 transition-all">
               <ExternalLink className="w-4 h-4" />
-              {t.visitWebsite[language]}
+              {t.visitPlatform[language]}
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-border">
+          <img src="/learn-english.png" alt="Aprender Inglês" className="w-full object-cover" />
         </div>
       </section>
 
@@ -49,12 +56,13 @@ export default function FlockProject() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-display font-bold mb-12">{p.solution[language]}</h2>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {[
               { title: p.s1Title[language], desc: p.s1Desc[language] },
               { title: p.s2Title[language], desc: p.s2Desc[language] },
               { title: p.s3Title[language], desc: p.s3Desc[language] },
               { title: p.s4Title[language], desc: p.s4Desc[language] },
+              { title: p.s5Title[language], desc: p.s5Desc[language] },
             ].map((item) => (
               <div key={item.title} className="p-6 border border-border rounded-2xl">
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -67,31 +75,38 @@ export default function FlockProject() {
 
       <section className="py-20 px-6 bg-muted/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-display font-bold mb-6">{p.journey[language]}</h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-[1.8]">
-            <p>{p.journeyP1[language]}</p>
-            <p>{p.journeyP2[language]}</p>
-            <p>{p.journeyP3[language]}</p>
+          <h2 className="text-3xl font-display font-bold mb-6">{p.businessModel[language]}</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { title: p.bm1Title[language], desc: p.bm1Desc[language] },
+              { title: p.bm2Title[language], desc: p.bm2Desc[language] },
+              { title: p.bm3Title[language], desc: p.bm3Desc[language] },
+              { title: p.bm4Title[language], desc: p.bm4Desc[language] },
+            ].map((item) => (
+              <div key={item.title} className="p-6 border border-border rounded-2xl bg-background">
+                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-[1.8]">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-display font-bold mb-12 text-center">{p.impact[language]}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 border border-border rounded-2xl text-center">
-              <div className="text-4xl font-bold mb-2">100%</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider">{p.stat1Label[language]}</div>
-            </div>
-            <div className="p-6 border border-border rounded-2xl text-center">
-              <div className="text-4xl font-bold mb-2">0</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider">{p.stat2Label[language]}</div>
-            </div>
-            <div className="p-6 border border-border rounded-2xl text-center">
-              <div className="text-4xl font-bold mb-2">∞</div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wider">{p.stat3Label[language]}</div>
-            </div>
+          <h2 className="text-3xl font-display font-bold mb-12 text-center">{p.results[language]}</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { value: "500+", label: p.stat1Label[language] },
+              { value: "4.9/5", label: p.stat2Label[language] },
+              { value: "95%", label: p.stat3Label[language] },
+              { value: "349MT", label: p.stat4Label[language] },
+            ].map((stat) => (
+              <div key={stat.label} className="p-6 border border-border rounded-2xl text-center">
+                <div className="text-4xl font-bold mb-2">{stat.value}</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

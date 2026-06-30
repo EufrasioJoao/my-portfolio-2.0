@@ -76,7 +76,7 @@ export function BusinessContact() {
                 <div>
                   <div className="font-medium mb-1">LinkedIn</div>
                   <a 
-                    href="https://www.linkedin.com/in/eufr%C3%A1sio-jaime-04a118248/" 
+                    href="https://www.linkedin.com/in/eufrasiojaime/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-muted-foreground hover:text-foreground transition-colors"
