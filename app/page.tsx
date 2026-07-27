@@ -17,8 +17,8 @@ export default async function LandingPage() {
         <About />
         <Experience />
         <Skills />
-        <AIEngineering />
         <Projects />
+        <AIEngineering />
         <Contact />
         <Footer />
       </main>

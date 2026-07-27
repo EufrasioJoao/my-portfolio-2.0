@@ -5,15 +5,20 @@ import { Briefcase, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from "@/lib/translations";
 
-import { getDuration } from "@/lib/duration";
+import { getDuration, jobs } from "@/lib/duration";
+
+
+const forge = getDuration(jobs[0].startDate, jobs[0].endDate, "pt");
+const flex = getDuration(jobs[1].startDate, jobs[1].endDate, "pt");
+const flextech = getDuration(jobs[2].startDate, jobs[2].endDate, "pt");
 
 const experiences = [
   {
     company: "Flexibilidade Lda",
     position: "flexibilidade",
     location: { en: "Nampula, Mozambique", pt: "Nampula, Moçambique" },
-    startDate: new Date(2025, 7), // Aug 2025
-    endDate: null,
+    startDate: jobs[1].startDate, // Aug 2025
+    endDate: jobs[1].endDate,
     type: { en: "Full-time", pt: "Tempo integral" },
     technologies: ["React", "Next.js", "TypeScript", "Node.js", "MySQL", "Tailwind CSS"],
   },
@@ -21,8 +26,8 @@ const experiences = [
     company: "Forge",
     position: "forge",
     location: { en: "Nampula, Mozambique · Hybrid", pt: "Nampula, Moçambique · Híbrido" },
-    startDate: new Date(2024, 10), // Nov 2024
-    endDate: null,
+    startDate: jobs[0].startDate, // Nov 2024
+    endDate: jobs[0].endDate,
     type: { en: "Full-time", pt: "Tempo integral" },
     technologies: ["React", "Next.js", "TypeScript", "Node.js", "Prisma", "MySQL"],
   },
@@ -30,8 +35,8 @@ const experiences = [
     company: "FlexTech",
     position: "flextech",
     location: { en: "Nampula, Mozambique · On-site", pt: "Nampula, Moçambique · No local" },
-    startDate: new Date(2024, 2), // Mar 2024
-    endDate: new Date(2024, 9),   // Oct 2024
+    startDate: jobs[2].startDate, // Mar 2024
+    endDate: jobs[2].endDate,
     type: { en: "Full-time", pt: "Tempo integral" },
     technologies: ["React", "JavaScript", "Node.js", "MongoDB", "Express", "CSS"],
   },
@@ -45,7 +50,7 @@ export function Experience() {
       <div className="absolute inset-0 bg-gradient-to-br from-muted/20 via-background to-muted/30 -z-10" />
       <div className="absolute top-1/4 right-10 w-96 h-96 bg-muted/30 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-10 w-80 h-80 bg-muted/40 rounded-full blur-3xl -z-10" />
-      
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,14 +79,14 @@ export function Experience() {
             className="group relative p-8 rounded-3xl transition-all duration-300 bg-background border border-foreground shadow-xl overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-muted/0 to-muted/0 group-hover:from-muted/30 group-hover:to-muted/20 transition-all duration-300 -z-10" />
-            
+
             <div className="absolute top-4 right-4">
               <div className="flex items-center gap-2 px-3 py-1.5 bg-foreground text-background rounded-full text-xs font-medium">
                 <div className="w-2 h-2 rounded-full bg-background animate-pulse" />
                 {translations.experience.current[language]}
               </div>
             </div>
-            
+
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full mb-6">
               <div className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
               <span className="text-sm font-medium">{getDuration(experiences[0].startDate, experiences[0].endDate, language)}</span>
@@ -90,7 +95,7 @@ export function Experience() {
             <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-foreground transition-colors">
               {translations.experience.flexibilidade.position[language]}
             </h3>
-            
+
             <div className="flex items-center gap-4 text-muted-foreground mb-6">
               <div className="flex items-center gap-2">
                 <Briefcase className="w-4 h-4" />
@@ -136,7 +141,7 @@ export function Experience() {
             className="group relative p-8 rounded-3xl transition-all duration-300 bg-background border border-border hover:border-foreground hover:shadow-xl overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-muted/0 to-muted/0 group-hover:from-muted/30 group-hover:to-muted/20 transition-all duration-300 -z-10" />
-            
+
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full mb-6">
               <div className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
               <span className="text-sm font-medium">{getDuration(experiences[1].startDate, experiences[1].endDate, language)}</span>
@@ -145,7 +150,7 @@ export function Experience() {
             <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-foreground transition-colors">
               {translations.experience.forge.position[language]}
             </h3>
-            
+
             <div className="flex items-center gap-4 text-muted-foreground mb-6">
               <div className="flex items-center gap-2">
                 <Briefcase className="w-4 h-4" />
@@ -193,7 +198,7 @@ export function Experience() {
         >
           {/* Gradient accent on hover */}
           <div className="absolute inset-0 bg-gradient-to-br from-muted/0 to-muted/0 group-hover:from-muted/30 group-hover:to-muted/20 transition-all duration-300 -z-10" />
-          
+
           {/* Company badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full mb-6">
             <div className="w-2 h-2 rounded-full bg-foreground" />
@@ -205,7 +210,7 @@ export function Experience() {
               <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-foreground transition-colors">
                 {translations.experience.flextech.position[language]}
               </h3>
-              
+
               <div className="flex items-center gap-4 text-muted-foreground mb-6">
                 <div className="flex items-center gap-2">
                   <Briefcase className="w-4 h-4" />

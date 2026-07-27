@@ -21,8 +21,8 @@ export function getDuration(
   const endLabel = endDate
     ? endDate.toLocaleDateString(jsLocale, { month: "short", year: "numeric" })
     : locale === "pt"
-    ? "Presente"
-    : "Present";
+      ? "Presente"
+      : "Present";
 
   let duration = "";
   if (years > 0 && months > 0) {
@@ -49,12 +49,12 @@ export const jobs = [
   {
     company: "Forge",
     startDate: new Date(2024, 10), // Nov 2024
-    endDate: null as Date | null,
+    endDate: new Date(2025, 7),
   },
   {
     company: "Flexibilidade Lda",
     startDate: new Date(2025, 7), // Aug 2025
-    endDate: null as Date | null,
+    endDate: new Date(2026, 5), // Jun 2025
   },
   {
     company: "FlexTech",
